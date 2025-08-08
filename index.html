@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VB Adithyan | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c5364;
+            --secondary: #203a43;
+            --accent: #ffd700;
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg: #fff;
+            --header-bg: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+            --shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            --border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode {
+            --primary: #4db8ff;
+            --secondary: #3a7bd5;
+            --accent: #ffcc00;
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --card-bg: #1e1e1e;
+            --header-bg: linear-gradient(90deg, #000000, #1a1a1a, #2d2d2d);
+            --shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            --border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--header-bg);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        section {
+            background-color: var(--card-bg);
+            margin: 1.5rem auto;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            max-width: 900px;
+            border: var(--border);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+
+        .project {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed var(--primary);
+        }
+
+        .project:last-child {
+            border-bottom: none;
+        }
+
+        .project h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            background: var(--secondary);
+            color: #fff;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: var(--card-bg);
+            border: none;
+            color: var(--text-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            z-index: 100;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+                margin: 1.5rem;
+            }
+            
+            .theme-toggle {
+                top: 0.5rem;
+                right: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <h1>VB Adithyan</h1>
+        <p>Aspiring Full Stack Developer & AI Enthusiast</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a technology enthusiast passionate about AI and building intelligent, data-driven solutions. I aim to create user-centric full stack applications that solve real-world problems.</p>
+        <p>With a strong foundation in computer science and hands-on experience in machine learning, I'm constantly exploring new technologies to enhance my skills and create impactful solutions.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Technical & Soft Skills</h2>
+        <ul>
+            <li><strong>Languages:</strong> Python, C, JavaScript, HTML, CSS</li>
+            <li><strong>Tools:</strong> MS Office, Git, GitHub, MySQL</li>
+            <li><strong>Libraries/Frameworks:</strong> Pandas, NumPy, Matplotlib, Scikit-learn</li>
+            <li><strong>Soft Skills:</strong> Problem-Solving, Communication, Teamwork, Adaptability</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>AI Resume Analyzer</h3>
+            <p>Built a resume analysis platform with dual interfaces for HR and users to manage and evaluate resumes automatically using NLP techniques.</p>
+        </div>
+        <div class="project">
+            <h3>Cardiovascular Disease Prediction</h3>
+            <p>Developed models using SVM, KNN, Decision Tree, Logistic Regression, and Random Forest with proper preprocessing and analysis, achieving 89% accuracy.</p>
+        </div>
+        <div class="project">
+            <h3>Puzzle Pathways – Educational Game</h3>
+            <p>Developed educational games using Pygame for children with intellectual disabilities (Color Chooser, Guess the Word, Number Puzzle).</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>B.Tech in Computer Science</strong><br>College of Engineering Muttathara, Trivandrum (2021 - 2025)</li>
+            <li><strong>12th Grade</strong><br>Jyothis Central School, GPA: 89.6%</li>
+            <li><strong>10th Grade</strong><br>Mother India International School, GPA: 88.6%</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:adithyanvb007@gmail.com">adithyanvb007@gmail.com</a></p>
+        <p>Phone: <a href="tel:9446232514">9446232514</a></p>
+        <p>
+            <a href="https://www.linkedin.com/in/vb-adithyan-4a0b43280" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+            <a href="https://github.com/VbAdithyan" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </p>
+        <p>
+            <a href="Vb Adithyan Resume.pdf" download><i class="fas fa-download"></i> Download Resume</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 VB Adithyan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dark mode toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+        
+        // Check for saved theme preference or use preferred color scheme
+        const savedTheme = localStorage.getItem('theme') || 
+                          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        
+        // Apply the saved theme
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            // Toggle icon and save preference
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
