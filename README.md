@@ -1,6 +1,6 @@
 # VB Adithyan - Portfolio Website
 
-![Portfolio Screenshot](screenshot.png)
+
 
 ## Overview
 
